@@ -3,7 +3,7 @@ include "connect.php";
 $email = $_POST['email'];
 $pass = $_POST['pass'];
 $username = $_POST['username'];
-$numberPhone = $_POST['numberPhone'];
+$phoneNumber = $_POST['phoneNumber'];
 
 //Kiểm tra email có bị trùng trên data
 $query = 'SELECT * FROM `user` WHERE `email` = "'.$email.'" ';
@@ -15,7 +15,7 @@ if ($numrow > 0) {//Nếu numrow > 0 là đã có dữ liệu trả về
         'message' => "Email da ton tai"
     ];
 }else{
-        $query = 'INSERT INTO `user`(`email`, `pass`, `username`, `numberPhone`) VALUES ("'.$email.'","'.$pass.'","'.$username.'","'.$numberPhone.'") ';
+        $query = 'INSERT INTO `user`(`email`, `pass`, `username`, `phoneNumber`) VALUES ("'.$email.'","'.$pass.'","'.$username.'","'.$phoneNumber.'") ';
         $data = mysqli_query($conn, $query);
         if ($data == true)  {
 

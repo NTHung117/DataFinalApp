@@ -27,7 +27,4 @@ if (!empty($result))  {
 }
 
 print_r(json_encode($arr));
-
-
-
 ?>
