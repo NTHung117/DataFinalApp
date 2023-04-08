@@ -34,13 +34,13 @@ if(empty($result)){//Nếu kết quả không có, ví dụ: Người dùng nh�
     // GMAIL username
     $mail->Username = "nguyentienhung117@gmail.com";
     // GMAIL password
-    $mail->Password = "hungcun123";
+    $mail->Password = "";
     $mail->SMTPSecure = "ssl";  
     // sets GMAIL as the SMTP server
     $mail->Host = "smtp.gmail.com";
     // set the SMTP port for the GMAIL server
     $mail->Port = "465";
-    $mail->From= "nguyentienhung117@gmail.com"; //Mail để gửi đi cho mail khác
+    $mail->From= "hungntgcd19882@fpt.edu.vn"; //Mail để gửi đi cho mail khác
     $mail->FromName='App Ban Hang';
     $mail->AddAddress($email, 'reciever_name');
     $mail->Subject  =  'Reset Password';

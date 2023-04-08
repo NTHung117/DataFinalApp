@@ -8,8 +8,6 @@ $diachi = $_POST['diachi'];
 $soluong = $_POST['soluong'];
 $chitiet = $_POST['chitiet'];
 
-
-
 $query = 'INSERT INTO `donhang`(`iduser`, `diachi`, `sodienthoai`, `email`, `soluong`, `tongtien`) 
             VALUES ('.$iduser.',"'.$diachi.'","'.$sdt.'","'.$email.'","'.$soluong.'","'.$tongtien.'") ';
 $data = mysqli_query($conn, $query);
@@ -29,17 +27,16 @@ if($data == true) {
             if ($data == true) {
                 $arr = [
                     'success' => true,
-                    'message' => "Truy van thanh cong"
+                    'message' => "Truy van thanh cong cua don hang"
                 ];
             }else {
                 $arr = [
                     'success' => false,
-                    'message' => "Truy van khong thanh cong"
+                    'message' => "Truy van khong thanh cong cua don hang"
                 ];
             }
-            print_r(json_encode($arr));
         }
-
+        print_r(json_encode($arr));
 
     }
 
@@ -49,6 +46,7 @@ if($data == true) {
         'message' => "Khong thanh cong"
     ];
     print_r(json_encode($arr));
+
 }
 
 ?>
