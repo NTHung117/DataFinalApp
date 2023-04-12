@@ -9,7 +9,7 @@ $id = $_POST['id'];//Truyền theo biến id để sửa
 
 $query = 'UPDATE `sanphammoi` SET 
            `tensanpham`="'.$tensp.'",`hinhanh`="'.$hinhanh.'",`mota`="'.$mota.'",`loai`='.$loai.',`giasanpham`="'.$gia.'" 
-            WHERE `id`='.
+            WHERE `id`='.$id;
 $data = mysqli_query($conn, $query);
 
 if ($data == true)  {
