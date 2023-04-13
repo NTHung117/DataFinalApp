@@ -1,7 +1,13 @@
 <?php
 include "connect.php";
 $iduser = $_POST['iduser'];
-$query = 'SELECT * FROM `donhang` WHERE `iduser` =  '.$iduser;
+if($iduser == 0){
+    //get all đơn hàng
+    $query = 'SELECT * FROM `donhang` ';
+}else{
+    $query = 'SELECT * FROM `donhang` WHERE `iduser` =  '.$iduser;
+}
+
 $data = mysqli_query($conn, $query);
 $result = array();
 while ($row = mysqli_fetch_assoc($data)) {//chạy qua từng vòng của bản dữ liệu đơn hàng
